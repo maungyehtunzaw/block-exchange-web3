@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  hardhat:
+    build: .
+    ports:
+      - "8545:8545"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    command: npx hardhat node --hostname 0.0.0.0
+  
+  # Optional: Add a service for running tests
+  test:
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npx hardhat test
+    profiles:
+      - test
