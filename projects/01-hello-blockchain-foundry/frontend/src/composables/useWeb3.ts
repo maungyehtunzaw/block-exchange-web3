@@ -1,8 +1,9 @@
 import { ref, computed, reactive } from 'vue'
 import { ethers } from 'ethers'
 import { HELLO_BLOCKCHAIN_ABI, type ContractInfo } from '@/contracts/types'
+import { getContractAddress } from '@/config/contracts'
 
-// Contract address - will be set after deployment
+// Contract address - automatically uses latest deployment, but can be overridden
 const CONTRACT_ADDRESS = ref<string>('')
 
 // Reactive state
@@ -66,6 +67,11 @@ export function useWeb3() {
       const network = await state.provider.getNetwork()
       state.chainId = Number(network.chainId)
 
+      // Auto-set contract address based on network
+      if (!CONTRACT_ADDRESS.value) {
+        CONTRACT_ADDRESS.value = getContractAddress(state.chainId)
+      }
+
       // Get balance
       const balance = await state.provider.getBalance(state.account)
       state.balance = ethers.formatEther(balance)
@@ -73,8 +79,8 @@ export function useWeb3() {
       // Create contract instance if address is available
       if (CONTRACT_ADDRESS.value) {
         state.contract = new ethers.Contract(
-          CONTRACT_ADDRESS.value, 
-          HELLO_BLOCKCHAIN_ABI, 
+          CONTRACT_ADDRESS.value,
+          HELLO_BLOCKCHAIN_ABI,
           state.signer
         )
         await loadContractData()
@@ -120,7 +126,7 @@ export function useWeb3() {
 
       // Get contract info
       const contractInfo: ContractInfo = await state.contract.getContractInfo()
-      
+
       contractState.message = contractInfo.currentMessage
       contractState.owner = contractInfo.contractOwner
       contractState.updateCount = contractInfo.totalUpdates
@@ -153,10 +159,10 @@ export function useWeb3() {
 
     try {
       const tx = await state.contract.updateMessage(newMessage)
-      
+
       // Wait for transaction to be mined
       const receipt = await tx.wait()
-      
+
       // Reload contract data
       await loadContractData()
 
@@ -185,7 +191,7 @@ export function useWeb3() {
     try {
       const tx = await state.contract.transferOwnership(newOwner)
       const receipt = await tx.wait()
-      
+
       await loadContractData()
 
       return {
@@ -209,7 +215,7 @@ export function useWeb3() {
     try {
       const tx = await state.contract.withdraw()
       const receipt = await tx.wait()
-      
+
       await loadContractData()
 
       return {
@@ -237,9 +243,9 @@ export function useWeb3() {
       })
 
       const receipt = await tx.wait()
-      
+
       await loadContractData()
-      
+
       // Update user balance
       const balance = await state.provider!.getBalance(state.account)
       state.balance = ethers.formatEther(balance)
