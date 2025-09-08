@@ -27,12 +27,23 @@ Got it 👍 You don't just want to "copy-paste Solidit2. **Your Own Token (ERC-2
    
    **📁 Location:** `/projects/01-hello-blockchain-foundry/`
    **🚀 Contract Address:** `0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512`
-   **🔑 Test Private Key:** `0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`tage 1 – Core Blockchain Concepts (Beginner)**
+   **🔑 Test Private Key:** `0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`
 
-1. **Hello Blockchain** ✅ **COMPLETED!**
+2. **Your Own Token (ERC-20)** ✅ **COMPLETED!**
 
-   * ✅ Write a Solidity smart contract that stores a message.
-   * ✅ Frontend: Vue 3 + TypeScript page to read & update the message.
+   * ✅ Create a simple cryptocurrency (`YHZ Token`).
+   * ✅ Add functions for transfer, balance check.
+   * ✅ You learned:
+
+     * ✅ ERC-20 standards.
+     * ✅ Token economics (1 YHZ = 1000 USDT value).
+     * ✅ Gas fees for token transfers.
+     * ✅ Wallet token balances.
+
+   **📁 Location:** `/projects/02-yhz-token-foundry/`
+   **🚀 Contract Address:** `0x5FbDB2315678afecb367f032d93F642f64180aa3`
+   **💰 Total Supply:** `1,000,000 YHZ tokens`
+   **💎 Token Value:** `1 YHZ = 1000 USDT`
    * ✅ You learned:
 
      * ✅ Deploying contracts (Foundry).
