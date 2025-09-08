@@ -1,4 +1,47 @@
-Got it 👍 You don’t just want to “copy-paste Solidity code from AI” — you want **real projects** that help you *understand how blockchain and Web3 actually work*. Let’s build from **small → medium → real-world scale**.
+Got it 👍 You don't just want to "copy-paste Solidit2. **Your Own Token (ERC-20)** 🚧 **IN PROGRESS**
+
+   * Create a simple cryptocurrency **YHZ Token** (1 YHZ = 1000 USDT value).
+   * Add functions for transfer, balance check, minting.
+   * You'll learn:
+
+     * ERC-20 standards.
+     * Gas fees.
+     * Wallet balances.
+     * Token economics.om AI" — you want **real projects** that help you *understand how blockchain and Web3 actually work*. Let's build from **small → medium → real-world scale**.
+
+---
+
+# 🛠 Projects to Truly Understand Blockchain & Web3
+
+### 🔹 **Stage 1 – Core Blockchain Concepts (Beginner)**
+
+1. **Hello Blockchain** ✅ **COMPLETED!**
+
+   * ✅ Write a Solidity smart contract that stores a message.
+   * ✅ Frontend: Vue 3 + TypeScript page to read & update the message.
+   * ✅ You learned:
+
+     * ✅ Deploying contracts (Foundry).
+     * ✅ Interacting with contracts (ethers.js).
+     * ✅ Wallet transactions (MetaMask integration).
+   
+   **📁 Location:** `/projects/01-hello-blockchain-foundry/`
+   **🚀 Contract Address:** `0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512`
+   **🔑 Test Private Key:** `0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`tage 1 – Core Blockchain Concepts (Beginner)**
+
+1. **Hello Blockchain** ✅ **COMPLETED!**
+
+   * ✅ Write a Solidity smart contract that stores a message.
+   * ✅ Frontend: Vue 3 + TypeScript page to read & update the message.
+   * ✅ You learned:
+
+     * ✅ Deploying contracts (Foundry).
+     * ✅ Interacting with contracts (ethers.js).
+     * ✅ Wallet transactions (MetaMask integration).
+   
+   **📁 Location:** `/projects/01-hello-blockchain-foundry/`
+   **🚀 Contract Address:** `0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512`
+   **🔑 Test Private Key:** `0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`’t just want to “copy-paste Solidity code from AI” — you want **real projects** that help you *understand how blockchain and Web3 actually work*. Let’s build from **small → medium → real-world scale**.
 
 ---
 
